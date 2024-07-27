@@ -13,6 +13,7 @@ const HomePage = () => {
     useEffect(() => {
         fetchTrendingMovies().then(data => setTrendingMovies(data));
     }, []);
+    console.log(trendingMovies);
 
      
     return (

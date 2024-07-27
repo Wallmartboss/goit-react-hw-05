@@ -4,9 +4,9 @@ import s from './MovieList.module.css'
 const MovieList = ({ typeMovies }) => {
     const location = useLocation();
 
-  return (
-      <div>
-          <ul className={s.list}>
+    return (
+        <div>
+            <ul className={s.list}>
                 {typeMovies.map(movie => (
                     <li key={movie.id} className={s.item}>
                         <Link to={movie.id.toString()} state={location}>
@@ -15,8 +15,8 @@ const MovieList = ({ typeMovies }) => {
                     </li>
                 ))}
             </ul>
-      </div>
-  )
-}
+        </div>
+    )
+};
 
 export default MovieList
