@@ -1,0 +1,10 @@
+.list {
+  list-style: square;
+  padding-left: 50px;
+  line-height: 200%;
+}
+
+.item {
+  font-size: 20px;
+  /* @hover: color: blue; */
+}

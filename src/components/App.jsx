@@ -1,5 +1,7 @@
 // import { useEffect, useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from '../pages/HomePage/HomePage';
+import MoviesPage from '../pages/MoviesPage/MoviesPage';
 // import Description from "./Description/Description";
 // import Options from "./Options/Options";
 // import Feedback from "./Feedback/Feedback";
@@ -13,7 +15,9 @@ const App = () => {
 
   return (
     <div>
-      <Route>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/movies' element={<MoviesPage />} />
       {/* <Description />
       <Options
         totalFeedback={totalFeedback}
@@ -25,7 +29,7 @@ const App = () => {
         totalFeedback={totalFeedback}
         perc_positive={perc_positive} /> }
       { !totalFeedback && <Notification /> }  */}
-        </Route>
+        </Routes>
     </div>
   );
 };
