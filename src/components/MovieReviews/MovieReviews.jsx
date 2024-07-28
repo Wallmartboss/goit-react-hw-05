@@ -9,8 +9,8 @@ const MovieReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetchMovieReviews(params.movies_id).then(data => setReviews(data));
-    }, [params.movies_id]);
+        fetchMovieReviews(params.moviesId).then(data => setReviews(data));
+    }, [params.moviesId]);
     
     if (!reviews) {
         return <h2>Loading...</h2>;

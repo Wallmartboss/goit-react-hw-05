@@ -9,16 +9,14 @@ const MovieCast = () => {
     const [cast, setCast] = useState([]);
 
     useEffect(() => {
-        fetchMovieCredits(params.movies_id).then(data => setCast(data));
-    }, [params.movies_id]);
-    
-    console.log(cast);
+        fetchMovieCredits(params.moviesId).then(data => setCast(data));
+    }, [params.moviesId]);
     
     if (!cast) {
         return <h2>Loading...</h2>;
     }
     return (
-        <div>
+        <div className={s.wrapper}>
             {cast.map(item => (
             <div key = {nanoid()} className={s.actor}>
                     <img src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}

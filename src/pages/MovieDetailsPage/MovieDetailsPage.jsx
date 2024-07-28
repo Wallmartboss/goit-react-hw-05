@@ -13,8 +13,8 @@ const MovieDetailsPage = () => {
 const defaultImg = 'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg'
     
     useEffect(() => {
-    fetchMovieDetails(params.movies_id).then(data => setMovie(data));
-    }, [params.movies_id]);
+    fetchMovieDetails(params.moviesId).then(data => setMovie(data));
+    }, [params.moviesId]);
     
   if (!movie) {
     return <h2>Loading...</h2>;
@@ -24,7 +24,7 @@ return (
     <div>
         <Link to={goBackRef.current} className={s.btn_back}> Go back </Link>
         <div className={s.wrapper}>
-            <p className={s.text}>Movie details #{params.movies_id}</p>
+            <p className={s.text}>Movie details #{params.moviesId}</p>
             <img src={
                 movie.backdrop_path ?
                     `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`

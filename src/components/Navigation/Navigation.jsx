@@ -16,7 +16,7 @@ const Navigation = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className={buildLinkClass} to='/Movies'>
+                    <NavLink className={buildLinkClass} to='/movies'>
                         Movies
                     </NavLink>
                 </li>

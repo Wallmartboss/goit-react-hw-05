@@ -1,3 +1,9 @@
 .actor {
   margin-bottom: 10px;
+  width: 220px;
+}
+.wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
