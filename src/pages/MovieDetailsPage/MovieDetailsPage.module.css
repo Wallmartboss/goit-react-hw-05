@@ -1,7 +1,15 @@
 .btn_back {
+  display: block;
+  width: 80px;
+  text-align: center;
   padding: 6px;
+  margin-left: 30px;
   background-color: gray;
-  box-shadow: 0 4px 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn_back:hover {
+  background-color: rgb(183, 183, 236);
 }
 .addit_data {
   display: flex;

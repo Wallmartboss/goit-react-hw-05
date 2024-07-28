@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import Navigation from '../../components/Navigation/Navigation';
 import MovieList from '../../components/MovieList/MovieList';
 import { fetchMovies } from '../../services/api';
 import s from './MoviesPage.module.css'
@@ -40,7 +39,6 @@ const handleSubmit = event => {
 
     return (
       <div>
-        <Navigation />
         <form onSubmit={handleSubmit} className={s.form}>
           <input
             className={s.input}
