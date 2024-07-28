@@ -12,7 +12,6 @@ const MoviesPage = () => {
   const [searchValue, setSearchValue] = useState('');
   const [searchMovies, setSearchMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  // const history = useHistory();
   const notify = () => toast('Please, fill keyword for searching...');
 
   useEffect(() => {
@@ -29,7 +28,6 @@ const MoviesPage = () => {
        setSearchMovies(data);
        searchParams.set('query', searchValue);
        setSearchParams(searchParams);
-      //  history.push(`?query=${encodeURIComponent(searchValue)}`);
         }
     catch (error) {
       console.error('Error fetching movies:', error);

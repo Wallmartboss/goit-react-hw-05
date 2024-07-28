@@ -1,17 +1,18 @@
-// import { useEffect, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage/HomePage';
-import MovieDetailsPage from '../pages/MovieDetailsPage/MovieDetailsPage';
-import MoviesPage from '../pages/MoviesPage/MoviesPage';
-import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
-import MovieCast from '../components/MovieCast/MovieCast';
-import MovieReviews from '../components/MovieReviews/MovieReviews';
+const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage/MovieDetailsPage'));
+const MoviesPage = lazy(() => import('../pages/MoviesPage/MoviesPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
+const MovieCast = lazy(() => import('../components/MovieCast/MovieCast'));
+const MovieReviews = lazy(() => import('../components/MovieReviews/MovieReviews'));
 
 const App = () => {
 
   return (
     <div>
-      <Routes>
+      <Suspense fallback={<h2>LOADING YOUR COMPONENT!</h2>}>
+       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/movies' element={<MoviesPage />} />
       
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='*' element={<NotFoundPage />} />
        
         </Routes>
+      </Suspense>
     </div>
   );
 };

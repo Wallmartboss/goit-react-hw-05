@@ -12,13 +12,16 @@ const MovieReviews = () => {
         fetchMovieReviews(params.movies_id).then(data => setReviews(data));
     }, [params.movies_id]);
     
-    console.log(reviews);
-    
     if (!reviews) {
         return <h2>Loading...</h2>;
-    }
+  }
+  if (!reviews.length) {
+    return <h2> No reviews for this movie</h2>
+  }
+
     return (
-        <div>
+      <div>
+  
             {reviews.map(item => (
             <div key = {nanoid()} className={s.review}>
             <h3>{item.author}</h3>

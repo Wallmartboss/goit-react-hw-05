@@ -24,20 +24,20 @@ export const fetchMovies = async (query) => {
 export const fetchMovieDetails = async (movie_id) => {
   const url = `https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`;
   const response = await axios.get(url, options);
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 };
 
 export const fetchMovieCredits = async (movie_id) => {
   const url = `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=en-US&page=1`;
   const response = await axios.get(url, options);
-  console.log(response.data.cast);
+  // console.log(response.data.cast);
   return response.data.cast;
 };
 
 export const fetchMovieReviews = async (movie_id) => {
   const url = `https://api.themoviedb.org/3/movie/${movie_id}/reviews?language=en-US&page=1`;
   const response = await axios.get(url, options);
-  console.log(response.data.results);
+  // console.log(response.data.results);
   return response.data.results;
 };
