@@ -29,16 +29,15 @@ export const fetchMovieDetails = async (movie_id) => {
 };
 
 export const fetchMovieCredits = async (movie_id) => {
-  const url = `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=en-US`;
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=en-US&page=1`;
   const response = await axios.get(url, options);
-  console.log(response.data);
-  return response.data;
+  console.log(response.data.cast);
+  return response.data.cast;
 };
 
-// export const fetchMovieReviews = () => {
-//     const url = 'https://api.themoviedb.org/3/movie/{movie_id}/reviews?language=en-US';
-
-//       axios.get(url, options)
-//         .then(response => { return response.data })
-//         .catch(err => console.error(err));
-// };
+export const fetchMovieReviews = async (movie_id) => {
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/reviews?language=en-US&page=1`;
+  const response = await axios.get(url, options);
+  console.log(response.data.results);
+  return response.data.results;
+};

@@ -6,10 +6,13 @@
 .addit_data {
   display: flex;
   margin: 0 auto;
-  margin-left: 60px;
-  gap: 40px;
+  margin-left: 100px;
+  gap: 50px;
   justify-content: start;
   margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 600;
 }
 .wrapper {
   padding: 20px;

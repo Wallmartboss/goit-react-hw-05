@@ -1,12 +1,12 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/api';
+import { nanoid } from 'nanoid';
 import s from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
   const params = useParams();
   const [movie, setMovie] = useState(null);
-//   const navigate = useNavigate();
   const location = useLocation();
   const goBackRef = useRef(location?.state || '/movies');
   
@@ -39,7 +39,7 @@ return (
                 <p>{movie.overview}</p>
                 <p className={s.subtitle}> Genre </p>
                  <p>   {movie.genres.map(genre => (
-                        <span key={movie.imdb_id}>
+                        <span key={nanoid()}>
                             <span> {genre.name}</span> </span>))} </p>
                 
        </div>
