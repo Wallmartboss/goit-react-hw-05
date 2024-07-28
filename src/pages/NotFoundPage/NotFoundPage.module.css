@@ -1,0 +1,10 @@
+.div {
+  display: block;
+  padding: 30px;
+}
+.link_back {
+  margin-top: 20px;
+  background-color: teal;
+  font-size: 24px;
+  padding: 10px;
+}

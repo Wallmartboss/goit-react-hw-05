@@ -1,0 +1,25 @@
+.btn_back {
+  padding: 6px;
+  background-color: gray;
+  box-shadow: 0 4px 0 6px rgba(0, 0, 0, 0.5);
+}
+.addit_data {
+  display: flex;
+  margin: 0 auto;
+  margin-left: 60px;
+  gap: 40px;
+  justify-content: start;
+  margin-top: 40px;
+}
+.wrapper {
+  padding: 20px;
+}
+.text {
+  margin-top: 30px;
+  font-size: 24px;
+}
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+}

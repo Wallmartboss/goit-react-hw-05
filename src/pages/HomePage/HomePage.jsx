@@ -19,7 +19,7 @@ const HomePage = () => {
     return (
         <div>
             <Navigation />
-            <h2>Trending today </h2>
+            <p className={s.title}>Trending today </p>
             <MovieList typeMovies={trendingMovies} />
         </div>
     );

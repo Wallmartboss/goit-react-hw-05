@@ -1,10 +1,8 @@
-.list {
-  list-style: square;
-  padding-left: 50px;
-  line-height: 200%;
-}
-
-.item {
-  font-size: 20px;
-  /* @hover: color: blue; */
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: blue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
 }
